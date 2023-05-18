@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .avatar{
+        width: 60px;
+        border-radius: 30px;
+    }
+    .msm1{
+        background-color: green;
+        color: white;
+        padding: 13px;
+        border-radius: 25pc;
+        border-bottom-left-radius: 0px;
+        display: inline-block;
+        margin-left: 10;
+    }
+.usuario1{
+    display: flex;
+}
+
+</style>
+
+</head>
+<body>
+<div class="usuario1">
+   
+
+    </div>
+
+
+
+    <style>
+       
+        .msm2{
+            background-color: rgb(34, 7, 189);
+            color: white;
+            padding: 13px;
+            border-radius: 25pc;
+            border-bottom-left-radius: 0px;
+            display: inline-block;
+            margin-left: 10;
+        }
+    .usuario2{
+        display: flex;
+        float: right;
+    }
+    
+    </style>
+    
+    </head>
+    <body>
+    
+
+
+
+<div id="contenedor">
+
+
+</div>
+<div style="display: flex;">
+    <div>
+        <input type="text" id="mensaje1">
+        <button onclick="msmUsuario1()">enviar mensaje</button>
+    </div>
+    
+    
+    
+    <div>
+        <input type="text" id="mensaje2">
+        <button onclick="msmUsuario2()">enviar mensaje 2</button>
+    </div>
+</div>
+
+
+
+
+<script>
+
+var caja = document.getElementById("contenedor")
+
+console.log(caja.outerHTML)
+
+
+
+
+function msmUsuario1(){
+
+var contenidoActual = caja.outerHTML
+var texto= document.getElementById("mensaje1").value
+
+
+
+
+    caja.innerHTML=`${contenidoActual} <div>
+        <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa3zHXeqYxVdWrAx0lw2E1BgnH3BCoB1M0Ow&usqp=CAU" alt="">
+        </div>
+        
+        <div class="msm1">
+            <span>${texto}</span><br>
+            <span>09:25</span>
+        </div>`
+        document.getElementById("mensaje1").value=""
+
+
+}
+
+function msmUsuario2(){
+
+    var contenidoActual = caja.outerHTML
+    var texto= document.getElementById("mensaje2").value
+
+    caja.innerHTML=`${contenidoActual}<div class="usuario2">
+        <div>
+     
+     
+     <div class="msm2">
+         <span>${texto}</span><br>
+         <span>10:25</span>
+     </div>
+     
+         </div>
+ 
+         <img class="avatar" src="https://thumbs.dreamstime.com/b/cara-asustadiza-del-monstruo-de-la-historieta-cuadrado-avatar-zombi-verde-halloween-vector-dise%C3%B1o-conjunto-110122632.jpg">
+     </div>`
+     document.getElementById("mensaje2").value=""
+    
+}
+    
+
+
+</script>
+
+
+
+</body>
+</html>
